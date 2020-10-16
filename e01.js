@@ -7,19 +7,18 @@ function lowerCase(code) {
   }
 
 function howManyCamelCase(str='') {
-    let result
+    let error="Il y a une erreur"
     let count=0
     for (let i = 0; i < str.length; i++) {
         const code = str.charCodeAt(i)
         if (str[i].charAt(lowerCase(code))) {
-            console.log("test");
-            if(str[i].charAt(upperCase(code)))
-            console.log("test2");
-            count+=1
+            if(upperCase(code)){
+                count+=1
+            }
         }
     }
     return count
     
 }
 
-console.log(howManyCamelCase('unMotABC'));
+console.log(howManyCamelCase('unMotAlphabet'));
